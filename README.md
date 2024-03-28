@@ -71,13 +71,13 @@ php-tokenizer
 
 # install the mysql version 8 community repository
 sudo wget https://dev.mysql.com/get/mysql80-community-release-el9-1.noarch.rpm 
-#
+
 # install the mysql server
 sudo dnf install -y mysql80-community-release-el9-1.noarch.rpm 
 sudo rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2023
 sudo dnf repolist enabled | grep "mysql.*-community.*"
 sudo dnf install -y mysql-community-server 
-#
+
 # start and enable the mysql server
 sudo systemctl start mysqld
 sudo systemctl enable mysqld
